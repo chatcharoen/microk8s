@@ -36,6 +36,9 @@ jobs:
         path: microk8s.snap
     - name: Running addons tests
       run: |
+        set -x
+        pwd
+        ls
         sudo snap install *.snap --classic --dangerous
         sudo pip3 install --upgrade pip
         sudo pip3 install -U pytest
